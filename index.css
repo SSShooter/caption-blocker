@@ -1,0 +1,27 @@
+body {
+  position: relative;
+}
+
+.mask {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: azure;
+  top: 0;
+  left: 0;
+  opacity: 0.9;
+  z-index: 9999;
+}
+
+.blocker {
+  position: absolute;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  z-index: 10000;
+}
+.placeholder {
+  position: absolute;
+  border: 2px solid #ccc;
+  z-index: 10000;
+  pointer-events: none;
+}

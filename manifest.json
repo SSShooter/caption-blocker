@@ -1,0 +1,27 @@
+{
+	"manifest_version": 3,
+	"name": "caption blocker",
+	"version": "1.0",
+	"description": "caption blocker 是一个简易字幕遮挡工具，快捷键 ctrl+B 新增遮挡，双击移除已生成的遮挡。",
+	"author": "ssshooter",
+	"icons": {
+		"48": "icon.png",
+		"128": "icon.png"
+	},
+	"browser_action": {
+		"default_icon": "icon.png"
+	},
+	"content_scripts": [
+		{
+			"matches": [
+				"https://www.bilibili.com/*"
+			],
+			"js": [
+				"index.js"
+			],
+			"css": [
+				"index.css"
+			]
+		}
+	]
+}
