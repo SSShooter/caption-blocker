@@ -68,9 +68,13 @@
   document.body.append(mask)
   document.body.append(placeholder)
   document.addEventListener('keyup', (e) => {
-    console.log(e)
+    if (e.code === 'Escape') {
+      mask.hidden = true
+      placeholder.hidden = true
+      isAdding = false
+    }
     if (isAdding) return
-    if (e.code === 'KeyB') {
+    if (e.ctrlKey && e.code === 'KeyB') {
       mask.hidden = false
       isAdding = true
     }
